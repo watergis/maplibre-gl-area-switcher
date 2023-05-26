@@ -1,42 +1,31 @@
 {
-  "name": "@watergis/mapbox-gl-area-switcher",
-  "version": "1.0.1",
-  "description": "This module adds area switcher control which is able to change locations of area to mapbox-gl",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist",
-    "css"
-  ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
+  "name": "@watergis/maplibre-gl-area-swticher",
+  "version": "1.0.0",
+  "description": "This repository to manage plugin of maplibre-gl-area-switcher.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
-    "build-webpack": "webpack --config webpack.js",
-    "start": "webpack-dev-server --open --hot --inline --config webpack.js"
+    "lint": "pnpm -r lint",
+    "format": "pnpm -r format",
+    "build": "pnpm -r build",
+    "release": "changeset publish"
   },
-  "keywords": [
-    "mapbox",
-    "mapbox-gl-js",
-    "area-switcher"
-  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/watergis/maplibre-gl-area-switcher.git"
+  },
+  "keywords": [],
   "author": "Jin IGARASHI",
   "license": "MIT",
-  "devDependencies": {
-    "@types/mapbox-gl": "^1.11.1",
-    "css-loader": "^3.6.0",
-    "es6-promise": "^4.2.8",
-    "jquery": "^3.5.1",
-    "path": "^0.12.7",
-    "style-loader": "^1.2.1",
-    "typescript": "^3.9.7",
-    "webpack": "^4.44.0",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+  "bugs": {
+    "url": "https://github.com/watergis/maplibre-gl-area-switcher/issues"
   },
-  "dependencies": {
-    "mapbox-gl": "^1.11.1"
-  }
+  "homepage": "https://github.com/watergis/maplibre-gl-area-switcher#readme",
+  "devDependencies": {
+    "@changesets/cli": "^2.26.0",
+    "lefthook": "^1.2.9"
+  },
+  "packageManager": "pnpm@8.2.0",
+  "engines": {
+    "pnpm": "^8.0.0"
+  },
+  "type": "module"
 }

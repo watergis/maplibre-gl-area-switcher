@@ -1,0 +1,63 @@
+{
+	"name": "@watergis/maplibre-gl-area-switcher",
+	"version": "1.0.0",
+	"description": "This module adds area switcher control which is able to change locations of area to maplibre-gl",
+	"main": "dist/maplibre-gl-area-switcher.umd.js",
+	"types": "./dist/types/index.d.ts",
+	"module": "dist/maplibre-gl-area-switcher.es.js",
+	"exports": {
+		".": {
+			"import": "./dist/maplibre-gl-area-switcher.es.js",
+			"require": "./dist/maplibre-gl-area-switcher.umd.js"
+		},
+		"./dist/maplibre-gl-area-switcher.css": {
+			"import": "./dist/maplibre-gl-area-switcher.css",
+			"require": "./dist/maplibre-gl-area-switcher.css"
+		}
+	},
+	"files": [
+		"dist",
+		"package.json"
+	],
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com/"
+	},
+	"scripts": {
+		"dev": "vite",
+		"build": "npm run build:js && npm run build:css",
+		"build:js": "tsc && vite build",
+		"build:scss": "sass --no-source-map --style=compressed src/scss/maplibre-gl-area-switcher.scss:dist/maplibre-gl-area-switcher.css",
+		"build:postcss": "postcss dist/*.css -r",
+		"build:css": "npm run build:scss && npm run build:postcss",
+		"preview": "vite preview",
+		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"format": "prettier --plugin-search-dir . --write ."
+	},
+	"keywords": [
+		"mapbox",
+		"maplibre-gl-js",
+		"area-switcher"
+	],
+	"author": "Jin IGARASHI",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/node": "^18.15.11",
+		"@typescript-eslint/eslint-plugin": "^5.58.0",
+		"@typescript-eslint/parser": "^5.58.0",
+		"autoprefixer": "^10.4.14",
+		"eslint": "^8.38.0",
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-plugin-import": "^2.27.5",
+		"path": "^0.12.7",
+		"postcss": "^8.4.21",
+		"postcss-cli": "^10.1.0",
+		"prettier": "^2.8.7",
+		"sass": "^1.62.0",
+		"sass-loader": "^13.2.2",
+		"typescript": "^5.0.4",
+		"vite": "^4.2.1"
+	},
+	"dependencies": {
+		"maplibre-gl": "^3.0.0"
+	}
+}
