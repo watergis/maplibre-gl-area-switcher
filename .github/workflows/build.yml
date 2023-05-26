@@ -34,3 +34,10 @@ jobs:
     - run: pnpm lint
 
     - run: pnpm build
+
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@v4
+      if: ${{ github.ref == 'refs/heads/main' }}
+      with:
+        branch: gh-pages # The branch the action should deploy to.
+        folder: sites/maplibre-gl-area-switcher.water-gis.com/dist # The folder the action should deploy.
