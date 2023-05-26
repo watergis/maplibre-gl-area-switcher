@@ -19,9 +19,6 @@
 		"dist",
 		"package.json"
 	],
-	"publishConfig": {
-		"registry": "https://npm.pkg.github.com/"
-	},
 	"scripts": {
 		"dev": "vite",
 		"build": "npm run build:js && npm run build:css",
@@ -40,6 +37,10 @@
 	],
 	"author": "Jin IGARASHI",
 	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/watergis/maplibre-gl-area-switcher/issues"
+	},
+	"homepage": "https://github.com/watergis/maplibre-gl-area-switcher/tree/main/packages/maplibre-gl-area-switcher#readme",
 	"devDependencies": {
 		"@types/node": "^18.15.11",
 		"@typescript-eslint/eslint-plugin": "^5.58.0",
